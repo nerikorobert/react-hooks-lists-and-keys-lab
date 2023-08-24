@@ -1,15 +1,15 @@
 import React from "react";
 
-function ProjectItem({ name, about, technologies }) {
-  return (
-    <div className="project-item">
-      <h3>{name}</h3>
-      <p>{about}</p>
-      <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
-      </div>
-    </div>
-  );
+function NavBar() {
+  const links = ["home", "about", "projects"];
+
+  const linksMap=links.map((link)=>{
+    console.log(link)
+    let newLink = `#${link}`
+    return <a key={link} href={newLink}>{link}</a>;
+  })
+
+  return <nav>{linksMap}</nav>;
 }
 
-export default ProjectItem;
+export default NavBar;

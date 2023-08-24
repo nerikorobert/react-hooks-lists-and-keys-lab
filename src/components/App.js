@@ -8,6 +8,7 @@ import user from "../data/user";
 function App() {
   return (
     <div>
+      <h2>Hello</h2>
       <NavBar />
       <Home username={user.name} city={user.city} color={user.color} />
       <About bio={user.bio} links={user.links} />
